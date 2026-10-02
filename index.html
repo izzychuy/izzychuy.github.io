@@ -672,44 +672,120 @@ section {
     color: #f5e5d0;
     margin: 6px 0;
 }
+/* =========================
+   CREATOR
+========================= */
+
+.creator {
+    background: var(--paper);
+    padding: 70px 24px;
+}
+
+.creator-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+
+    background: #fff8ed;
+    border: 1px solid #eadbc8;
+    border-radius: 22px;
+    padding: 35px;
+
+    box-shadow: var(--shadow);
+}
+
+.creator-photo {
+    width: 230px;
+    height: 230px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+    border: 7px solid white;
+
+    box-shadow: 0 10px 25px rgba(47, 27, 18, 0.18);
+
+    flex-shrink: 0;
+}
+
+.creator-text {
+    max-width: 550px;
+}
+
+.creator-eyebrow {
+    color: var(--caramel);
+    font: 700 0.78rem Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+}
+
+.creator-text h2 {
+    color: var(--brown);
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+}
+
+.creator-text p {
+    color: #765949;
+    line-height: 1.7;
+}
 
 
 /* =========================
    FOOTER
 ========================= */
-<section class="creator" id="creator">
-  <div class="creator-inner">
 
-    <img
-      class="creator-photo"
-      src="isabella-chuy.jpg"
-      alt="Isabella Chuy, creator of Chuy's Delights"
-    />
+footer {
+    background: var(--espresso);
+    color: #f8ead7;
+    text-align: center;
+    padding: 40px 20px;
+}
 
-    <div>
-      <div class="creator-eyebrow">Meet the Creator</div>
+footer .logo {
+    color: white;
+    margin-bottom: 8px;
+}
 
-      <h2>Created by Isabella Chuy</h2>
+footer p {
+    font: 0.85rem Arial, sans-serif;
+    color: #cdb9a6;
+    margin: 6px 0;
+}
 
-      <p>
-        Chuy's Delights was created by Isabella Chuy as a cozy coffee shop
-        website project, bringing together warm coffeehouse vibes, seasonal
-        celebrations, iced coffees, and sweet treats.
-      </p>
-    </div>
 
-  </div>
-</section>
+/* =========================
+   CREATOR RESPONSIVE
+========================= */
 
-   <footer>
-  <div class="logo">Chuy's Delights ☕</div>
+@media (max-width: 700px) {
 
-  <p>Cozy coffee. Sweet moments. Seasonal celebrations.</p>
+    .creator-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
 
-  <p>Created &amp; designed by Isabella Chuy</p>
+    .creator-photo {
+        width: 200px;
+        height: 200px;
+    }
 
-  <p>© 2026 Chuy's Delights · Demo website</p>
-</footer> 
+    .creator-text h2 {
+        font-size: 2rem;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 
 
 /* =========================
@@ -1408,6 +1484,43 @@ section {
 </main>
 
 
+<!-- =========================
+     ABOUT THE CREATOR
+========================= -->
+
+<section class="creator">
+
+    <div class="creator-inner">
+
+        <img
+            class="creator-photo"
+            src="Photo of me.jpg"
+            alt="Photo of Isabella Chuy"
+        >
+
+        <div class="creator-text">
+
+            <div class="creator-eyebrow">
+                Meet the Creator
+            </div>
+
+            <h2>
+                Created by Isabella Chuy
+            </h2>
+
+            <p>
+                Chuy's Delights was created by Isabella Chuy
+                as a cozy coffee shop website project. The site
+                combines warm coffeehouse vibes, seasonal
+                celebrations, iced coffees, and sweet treats.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 <!-- =========================
      FOOTER
@@ -1424,12 +1537,15 @@ section {
         Seasonal celebrations.
     </p>
 
-    <p style="margin-top:12px">
+    <p>
+        Created &amp; designed by Isabella Chuy
+    </p>
+
+    <p>
         © 2026 Chuy's Delights · Demo website
     </p>
 
 </footer>
-
 
 
 <!-- =========================
